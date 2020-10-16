@@ -1,0 +1,17 @@
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
+@mixin color-background-hover-invert($primary, $secondary) {
+    color: $primary;
+    border-color: $primary;
+    background-color: $secondary;
+
+    &:hover {
+    color: $secondary;
+    border-color: $primary;
+    background-color: $primary;
+    }
+}
