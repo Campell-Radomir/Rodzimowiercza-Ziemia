@@ -1,0 +1,1 @@
+scss --update style.scss:style.css
