@@ -4,6 +4,18 @@
     display: flex;
 }
 
+.rkp-logo {
+    // z-index: 20;
+    &__img {
+        width: 8em;
+        height: auto;
+        position: fixed;
+        top: 4em;
+        left: 5em;
+        z-index: 20;
+    }
+}
+
 .main-page {
     width: 100%;
 }
@@ -162,6 +174,13 @@
 
 }
 
+.presentation-video {
+    text-align: center;
+    &__youtube {
+        @extend %abstract-video
+    }
+}
+
 .how-can-you-help {
     @extend %abstract-article;
     &__title {
@@ -204,6 +223,7 @@
     }
 
     .whip-round {
+        text-align: center;
         &__title {
             @extend %abstract-article__title;
         }
@@ -211,10 +231,15 @@
         &__subtitle {
             @extend %abstract-article__title;
             color: #000;
+            margin: 0;
         }
 
         &__link {
 
+        }
+
+        &__img {
+            vertical-align: baseline;
         }
     }
 
@@ -263,6 +288,12 @@
     }
     &__text {
         @extend %abstract-article__text;
+    }
+    &-video {
+        text-align: center;
+        &__youtube {
+            @extend %abstract-video;
+        }
     }
 }
 

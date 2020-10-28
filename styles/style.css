@@ -54,15 +54,27 @@
   max-width: 3em; }
 
 .presentation-postulate .presentation-postulates .postulate__headline, .presentation-perspective .presentation-perspectives .perspective__headline, .build-nearby .build-pluses .build-plus__headline {
-  color: #add651;
-  text-decoration: underline; }
+  color: #338535;
+  font-weight: bold; }
 
 .presentation-postulate .presentation-postulates .postulate__text, .presentation-perspective .presentation-perspectives .perspective__text, .build-nearby .build-pluses .build-plus__text {
   text-align: center;
   font-size: 0.8em; }
 
+.presentation-video__youtube, .why-help-video__youtube {
+  height: 30em;
+  width: 80%; }
+
 .body {
   display: flex; }
+
+.rkp-logo__img {
+  width: 8em;
+  height: auto;
+  position: fixed;
+  top: 4em;
+  left: 5em;
+  z-index: 20; }
 
 .main-page {
   width: 100%; }
@@ -74,7 +86,7 @@
   display: none; }
   @media (min-width: 992px) {
     .aside-pane {
-      background-color: #338401;
+      background-color: #338535;
       min-width: 20%;
       display: flex;
       flex-direction: column; } }
@@ -96,7 +108,7 @@
   .before-header__link {
     color: #add651; }
     .before-header__link:hover {
-      color: #338401; }
+      color: #338535; }
 
 .header {
   background-color: #fff;
@@ -116,6 +128,9 @@
 .carousel-caption__text {
   text-rendering: optimizeLegibility; }
 
+.presentation-video {
+  text-align: center; }
+
 .help-pay {
   display: grid;
   grid-template-columns: auto;
@@ -130,8 +145,13 @@
     .help-pay .grant__bank {
       display: flex;
       flex-direction: column; }
-  .help-pay .whip-round__subtitle {
-    color: #000; }
+  .help-pay .whip-round {
+    text-align: center; }
+    .help-pay .whip-round__subtitle {
+      color: #000;
+      margin: 0; }
+    .help-pay .whip-round__img {
+      vertical-align: baseline; }
   .help-pay .project-shared {
     min-height: 4em;
     padding: 0 2em;
@@ -140,7 +160,7 @@
     justify-content: space-between;
     align-items: center; }
     .help-pay .project-shared__text--colored {
-      color: #338401;
+      color: #338535;
       font-size: 1.2em;
       font-weight: 800; }
     .help-pay .project-shared__btn--fb {
@@ -164,6 +184,9 @@
       grid-template-columns: 50% 50%; }
       .help-pay .project-shared {
         grid-column: 1 / 3; } }
+
+.why-help-video {
+  text-align: center; }
 
 .key-requirements .requirements {
   list-style-type: none; }
