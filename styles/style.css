@@ -188,6 +188,11 @@
 .why-help-video {
   text-align: center; }
 
+.guidelines__text--bold {
+  font-weight: bold;
+  font-style: italic;
+  font-style: 1.2em; }
+
 .key-requirements .requirements {
   list-style-type: none; }
   .key-requirements .requirements__item {

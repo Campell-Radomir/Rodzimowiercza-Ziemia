@@ -304,8 +304,13 @@
     }
     &__text {
         @extend %abstract-article__text;
+
+        &--bold {
+            font-weight: bold;
+            font-style: italic;
+            font-style: 1.2em;
+        }
     }
-    // TODO guidelines first words
 }
 
 .build-nearby {
