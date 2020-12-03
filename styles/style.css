@@ -196,7 +196,8 @@
 .key-requirements .requirements {
   list-style-type: none; }
   .key-requirements .requirements__item {
-    text-align: justify; }
+    text-align: justify;
+    margin: 1em 0; }
 
 .moon-face-list :nth-child(8n+1)::before {
   content: '🌑';

@@ -365,10 +365,7 @@
         list-style-type: none;
         &__item {
             text-align: justify;
-            // &::before {
-            //     content: '🌿';
-            //     margin: 0 10px 0 -20px;
-            // }
+            margin: 1em 0;
         }
     }
 }
