@@ -151,7 +151,8 @@
       color: #000;
       margin: 0; }
     .help-pay .whip-round__img {
-      vertical-align: baseline; }
+      vertical-align: baseline;
+      width: 100%; }
   .help-pay .project-shared {
     min-height: 4em;
     padding: 0 2em;
