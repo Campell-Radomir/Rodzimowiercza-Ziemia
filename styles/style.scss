@@ -5,14 +5,17 @@
 }
 
 .rkp-logo {
-    // z-index: 20;
     &__img {
         width: 8em;
         height: auto;
         position: fixed;
         top: 4em;
-        left: 5em;
+        left: 1em;
         z-index: 20;
+    }
+
+    @media #{min-lg} {
+        left: 3em;
     }
 }
 
@@ -24,22 +27,109 @@
     padding: 0 10%;
 }
 
-.aside-pane {
+#aside-show-checkbox {
     display: none;
-    @media #{$min-lg} {
-        background-color: $rkp-dark-green;
-        min-width: 20%;
-        display: flex;
-        flex-direction: column;
+}
+
+#aside-show-checkbox:checked ~ .aside-pane {
+    @media #{$max-lg} {
+        position: fixed;
+        top: 0;
+        right:0;
+        z-index: 20;
+        width: 70%;
+        height: 100%;
+        & .zrzutka {
+            display: initial;
+        }
+    }
+    .aside-show-trigger > .aside-show-trigger__icon {
+        background: transparent;
+        &::before, &::after {
+            top: 0px;
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
     }
 }
 
+.aside-show-trigger {
+    @media #{$min-lg} {
+        display: none;
+    }
+    display: inline-block;
+    margin: 1em 0 0 0.5em;
+    .aside-show-trigger__icon {
+        display: block;
+        position: relative;
+
+        background: #333;
+        height: 2px;
+        transition: background .2s ease-out;
+        width: 18px;
+        &::before, &::after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .5s ease-out;
+            width: 100%;
+        }
+
+        &::before {
+            top: 5px;
+        }
+
+        &::after {
+            top: -5px;
+        }
+    }
+}
+
+.aside-pane {
+    display: flex;
+    background-color: $rkp-dark-green;
+    flex-direction: column;
+    transition: display 1s ease-out;
+    min-width: 2em;
+}
+
 .zrzutka {
-    top: 8em;
-    position: sticky;
+    display: none;
+    @media #{$min-lg} {
+        display: initial
+    }
+    top: 4em;
+    &__links {
+        margin: 1em 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__link {
+        color: $rkp-green;
+
+        &:hover {
+            color: $rkp-light-green;
+        }
+
+        & > .link__ico {
+            height: auto;
+            width: 2em;
+            filter: invert(0.8);
+        }
+    }
     &__render {
         width: 100%;
-        height: 300%;
+        height: 27em;
+    }
+
+    @media #{$min-lg} {
+        position: sticky;
     }
 }
 
@@ -50,26 +140,6 @@
     width: 100%; 
     padding: 1em; 
     justify-content: space-between;
-
-    &__link {
-        color: $rkp-green;
-
-        &:hover {
-            color: $rkp-dark-green;
-        }
-
-        &--facebook {
-            &::before {
-
-            }
-        }
-
-        &--mail {
-            &::before {
-
-            }
-        }
-    }
 }
 
 .header {
@@ -79,12 +149,17 @@
     justify-content: flex-end;
 
     &__link {
-        
         color: #000;
         text-decoration: none;
         margin: 0 0.5rem;
         &:active {
             color: lighten($color: $rkp-green, $amount: 20);
+        }
+    }
+
+    &__link:first-child {
+        @media #{$max-lg} {
+            display: none;
         }
     }
 }
@@ -99,6 +174,30 @@
     &__text {
         text-rendering: optimizeLegibility;
     }
+}
+
+.read-more-btn {
+    display: none;
+}
+
+.read-more-btn ~ .read-more-trigger::before {
+    content: "Czytaj więcej";
+    color: $rkp-light-red;
+}
+
+.read-more-btn:checked ~ .read-more-trigger::before {
+    content: "Zwiń";
+}
+
+.extendable-text {
+    font-size: 0;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.read-more-btn:checked ~ .extendable-text {
+    font-size: inherit;
+    opacity: 1;
 }
 
 
@@ -176,6 +275,7 @@
 
 .presentation-video {
     text-align: center;
+    @extend %abstract-video-wrapper;
     &__youtube {
         @extend %abstract-video
     }
@@ -245,14 +345,13 @@
     }
 
     .project-shared {
+        display: none;
         min-height: 4em;
         padding: 0 2em;
         background-color: $rkp-light-green;
-        display: flex;
         justify-content: space-between;
         align-items: center;
         &__text {
-            
             &--colored {
                 color: $rkp-dark-green;
                 font-size: 1.2em;
@@ -276,9 +375,9 @@
     @media #{$min-lg} {
         grid-template-columns: 50% 50%;
 
-        .project-shared {
-            grid-column: 1 / 3;
-        }
+        // .project-shared {
+        //     grid-column: 1 / 3;
+        // }
     }
 }
 
@@ -292,6 +391,7 @@
     }
     &-video {
         text-align: center;
+        @extend %abstract-video-wrapper;
         &__youtube {
             @extend %abstract-video;
         }

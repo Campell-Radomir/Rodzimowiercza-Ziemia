@@ -81,7 +81,16 @@
     font-size: 0.8em;
 }
 
-%abstract-video {
-    height: 30em;
-    width: 80%;
+%abstract-video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    & %abstract-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 }

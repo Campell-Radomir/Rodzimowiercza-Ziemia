@@ -16,10 +16,7 @@
       <a class="rkp-logo" href="#before-header"><img id="rkp-logo" src="ico/RKPsun2.1.svg" alt="logo RKP" class="rkp-logo__img"></a>
         <section id="before-header" class="before-header">
             <span>RODZIMIERCZA ZIEMIA</span>
-            <div class="before-header__links">
-                <a class="before-header__link before-header__link--facebook" target="_blank" href="https://www.facebook.com/RodzimowiercyNaSwoim">@RodzimowiercyNaSwoimStrona</a>
-                <a class="before-header__link before-header__link--mail" target="_blank" href="mailto:rkp.org.pl@wp.pl">RKP.ORG.PL@WP.PL</a>
-            </div>
+            
         </section>
 
         <header class="header">
@@ -67,7 +64,10 @@
             <section>
               <article class="entering-article">
                 <h1 class="entering-article__title">Wspólnie stwórzmy miejsce wyjątkowe</h1>
-                <p class="entering-article__text">Wyobraźcie sobie czysty ekologicznie teren, w centralnym miejscu którego szumi Święty Gaj, a w nim skryta jest niewielka, kryta gontem, poświęcona odwiecznym słowiańskim bóstwom, świątynia. W pewnym oddaleniu wznosi się drewniany gród z przycupniętą w jego cieniu całoroczną wioską. Nie jest to jednak kolejny skansen lecz rzeczywiste miejsce, w którym oprócz zachowania rodzimej kultury nadal podtrzymywane są słowiańskie wierzenia. Miejsce, w którym rekonstrukcja historyczna jest tylko jednym z elementów życia społeczności pozostającej w zgodzie z tradycją swoich przodków, a jednocześnie nie będącej oderwaną od współczesnej rzeczywistości. Społeczności, żyjącej w myśl prostej zasady: "rób co chcesz bylebyś przy tym nie krzywdził innych".
+                <p class="entering-article__text">Wyobraźcie sobie czysty ekologicznie teren, w centralnym miejscu którego szumi Święty Gaj, a w nim skryta jest niewielka, kryta gontem, poświęcona odwiecznym słowiańskim bóstwom, świątynia. W pewnym oddaleniu wznosi się drewniany gród z przycupniętą w jego cieniu całoroczną wioską. 
+                  <input id="entering-article__read-more-btn" class="read-more-btn" type="checkbox">
+                  <span class="extendable-text">Nie jest to jednak kolejny skansen lecz rzeczywiste miejsce, w którym oprócz zachowania rodzimej kultury nadal podtrzymywane są słowiańskie wierzenia. Miejsce, w którym rekonstrukcja historyczna jest tylko jednym z elementów życia społeczności pozostającej w zgodzie z tradycją swoich przodków, a jednocześnie nie będącej oderwaną od współczesnej rzeczywistości. Społeczności, żyjącej w myśl prostej zasady: "rób co chcesz bylebyś przy tym nie krzywdził innych".</span>
+                  <label for="entering-article__read-more-btn" class="read-more-trigger"></label>
                 </p>
               </article>
             </section>
@@ -246,9 +246,27 @@
           </section>
         </section>
     </main>
+    <input id="aside-show-checkbox" type="checkbox" name="aside-show">
     <aside class="aside-pane ">
+      <label class="aside-show-trigger" for="aside-show-checkbox">
+        <i class="aside-show-trigger__icon"></i>
+      </label>
       <article class="zrzutka">
-        <iframe class="zrzutka__render" width="100%" height="300%" src="https://zrzutka.pl/yb7p5y/widget/23" frameborder="0" scrolling="no"></iframe>
+        <section class="zrzutka__links">
+          <a class="zrzutka__link zrzutka__link--mail" target="_blank" href="mailto:rkp.org.pl@wp.pl">
+            <img class="link__ico"src="./ico/mail.svg"  alt="poczta" title="RKP.ORG.PL[at]WP.PL">
+          </a>
+          <a class="zrzutka__link zrzutka__link--facebook" target="_blank" href="https://www.facebook.com/RodzimowiercyNaSwoim">
+            <img class="link__ico" src="./ico/facebook.svg" alt="facebook" title="@RodzimowiercyNaSwoimStrona">
+          </a>
+          <a class="zrzutka__link zrzutka__link--instagram" target="_blank" href="https://www.instagram.com/rodzimowierstwo/?">
+            <img class="link__ico" src="./ico/instagram.svg" alt="facebook" title="@RODZIMOWIERSTW0">
+          </a>
+          <a class="zrzutka__link zrzutka__link--twitter" target="_blank" href="https://twitter.com/RODZIMOWIERSTW0">
+            <img class="link__ico" src="./ico/twitter.svg" alt="poczta" title="@RODZIMOWIERSTW0">
+          </a>
+      </section>
+        <iframe class="zrzutka__render" src="https://zrzutka.pl/yb7p5y/widget/23" frameborder="0" scrolling="no"></iframe>
       </article>
     </aside>
 </body>
