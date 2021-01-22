@@ -1,5 +1,15 @@
 @import 'abstracts';
 
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
 .body {
     display: flex;
 }
@@ -12,6 +22,10 @@
         top: 4em;
         left: 1em;
         z-index: 20;
+        transition: all 5s ease-in-out;
+        &:hover {
+            -webkit-animation: rotation 2s infinite linear;
+        }
     }
 
     @media #{min-lg} {
@@ -120,7 +134,7 @@
         & > .link__ico {
             height: auto;
             width: 2em;
-            filter: invert(0.8);
+            // filter: invert(0.8);
         }
     }
     &__render {
