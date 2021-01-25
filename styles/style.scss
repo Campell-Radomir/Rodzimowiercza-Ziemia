@@ -16,9 +16,9 @@
 
 .rkp-logo {
     &__img {
-        width: 8em;
+        width: 6em;
         height: auto;
-        position: fixed;
+        position: absolute;
         top: 4em;
         left: 1em;
         z-index: 20;
@@ -26,10 +26,28 @@
         &:hover {
             -webkit-animation: rotation 2s infinite linear;
         }
-    }
 
-    @media #{min-lg} {
-        left: 3em;
+        @media #{$min-md} {
+            display: fixed;
+        }
+
+        @media #{$min-lg} {
+            left: 3em;
+            width: 8em;
+        }
+    }
+}
+
+.start-link {
+    &__img {
+        width: 2em;
+        height: auto;
+        position: fixed;
+        bottom: 5em;
+        right: 8vh;
+        z-index: 20;
+        padding: 0.1em;
+        border: black solid 2px;
     }
 }
 
@@ -170,12 +188,6 @@
             color: lighten($color: $rkp-green, $amount: 20);
         }
     }
-
-    &__link:first-child {
-        @media #{$max-lg} {
-            display: none;
-        }
-    }
 }
 
 
@@ -194,19 +206,32 @@
     display: none;
 }
 
+.read-more-trigger {
+    @media #{$min-lg} {
+        display: none;
+    }
+}
+
 .read-more-btn ~ .read-more-trigger::before {
     content: "Czytaj więcej";
+    // content: '📖';
     color: $rkp-light-red;
 }
 
 .read-more-btn:checked ~ .read-more-trigger::before {
     content: "Zwiń";
+    // content: '📕';
 }
 
 .extendable-text {
     font-size: 0;
     opacity: 0;
     transition: 0.5s ease-in-out;
+
+    @media #{$min-lg} {
+        font-size: initial;
+        opacity: initial;
+    }
 }
 
 .read-more-btn:checked ~ .extendable-text {
@@ -230,7 +255,7 @@
 .presentation-postulate {
     @extend %abstract-article;
     &__title {
-        @extend %abstract-article__title;
+        @extend %abstract-article__title--images;
     }
     &__text {
         @extend %abstract-article__text;
@@ -260,7 +285,7 @@
 .presentation-perspective {
     @extend %abstract-article;
     &__title {
-        @extend %abstract-article__title;
+        @extend %abstract-article__title--images;
     }
     &__text {
         @extend %abstract-article__text;

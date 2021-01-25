@@ -2,9 +2,12 @@
 .entering-article, .presentation-postulate, .presentation-perspective, .how-can-you-help, .help-pay, .why-help, .guidelines, .build-nearby, .guarantee, .key-requirements {
   margin: 2em; }
 
-.entering-article__title, .presentation-postulate__title, .presentation-perspective__title, .how-can-you-help__title, .help-pay .grant__title, .help-pay .grant__subtitle, .help-pay .whip-round__title, .help-pay .whip-round__subtitle, .why-help__title, .guidelines__title, .build-nearby__title, .guarantee__title, .key-requirements__title {
+.presentation-postulate__title, .presentation-perspective__title, .entering-article__title, .how-can-you-help__title, .help-pay .grant__title, .help-pay .grant__subtitle, .help-pay .whip-round__title, .help-pay .whip-round__subtitle, .why-help__title, .guidelines__title, .build-nearby__title, .guarantee__title, .key-requirements__title {
   color: #add651;
   text-align: center; }
+
+.presentation-postulate__title, .presentation-perspective__title {
+  margin-bottom: 0; }
 
 .entering-article__text, .presentation-postulate__text, .presentation-perspective__text, .how-can-you-help__text, .why-help__text, .guidelines__text, .build-nearby__text, .guarantee__text, .key-requirements__text {
   text-align: justify; }
@@ -82,18 +85,32 @@
   display: flex; }
 
 .rkp-logo__img {
-  width: 8em;
+  width: 6em;
   height: auto;
-  position: fixed;
+  position: absolute;
   top: 4em;
   left: 1em;
   z-index: 20;
   transition: all 5s ease-in-out; }
   .rkp-logo__img:hover {
     -webkit-animation: rotation 2s infinite linear; }
-@media min-lg {
-  .rkp-logo {
-    left: 3em; } }
+  @media (min-width: 768px) {
+    .rkp-logo__img {
+      display: fixed; } }
+  @media (min-width: 992px) {
+    .rkp-logo__img {
+      left: 3em;
+      width: 8em; } }
+
+.start-link__img {
+  width: 2em;
+  height: auto;
+  position: fixed;
+  bottom: 5em;
+  right: 8vh;
+  z-index: 20;
+  padding: 0.1em;
+  border: black solid 2px; }
 
 .main-page {
   width: 100%; }
@@ -199,9 +216,6 @@
     margin: 0 0.5rem; }
     .header__link:active {
       color: #d4e9a4; }
-  @media (max-width: 991px) {
-    .header__link:first-child {
-      display: none; } }
 
 .carousel-caption__header {
   margin-bottom: 15rem;
@@ -212,17 +226,25 @@
 .read-more-btn {
   display: none; }
 
+@media (min-width: 992px) {
+  .read-more-trigger {
+    display: none; } }
+
 .read-more-btn ~ .read-more-trigger::before {
-  content: "Czytaj więcej";
+  content: '📖';
   color: #ea0449; }
 
 .read-more-btn:checked ~ .read-more-trigger::before {
-  content: "Zwiń"; }
+  content: '📕'; }
 
 .extendable-text {
   font-size: 0;
   opacity: 0;
   transition: 0.5s ease-in-out; }
+  @media (min-width: 992px) {
+    .extendable-text {
+      font-size: initial;
+      opacity: initial; } }
 
 .read-more-btn:checked ~ .extendable-text {
   font-size: inherit;

@@ -12,6 +12,11 @@
     text-align: center;
 }
 
+%abstract-article__title--images {
+    @extend %abstract-article__title;
+    margin-bottom: 0;
+}
+
 %abstract-article__text {
     text-align: justify;
 }
