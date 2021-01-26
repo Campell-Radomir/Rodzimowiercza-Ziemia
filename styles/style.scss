@@ -1,5 +1,13 @@
 @import 'abstracts';
 
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
 
 @-webkit-keyframes rotation {
     from {
@@ -24,15 +32,15 @@
         z-index: 20;
         transition: all 5s ease-in-out;
         &:hover {
+            animation: rotation 2s infinite linear;
             -webkit-animation: rotation 2s infinite linear;
         }
 
         @media #{$min-md} {
-            display: fixed;
+            position: fixed;
         }
 
         @media #{$min-lg} {
-            left: 3em;
             width: 8em;
         }
     }
@@ -44,7 +52,7 @@
         height: auto;
         position: fixed;
         bottom: 5em;
-        right: 8vh;
+        right: 8vw;
         z-index: 20;
         padding: 0.1em;
         border: black solid 2px;
@@ -61,32 +69,6 @@
 
 #aside-show-checkbox {
     display: none;
-}
-
-#aside-show-checkbox:checked ~ .aside-pane {
-    @media #{$max-lg} {
-        position: fixed;
-        top: 0;
-        right:0;
-        z-index: 20;
-        width: 70%;
-        height: 100%;
-        & .zrzutka {
-            display: initial;
-        }
-    }
-    .aside-show-trigger > .aside-show-trigger__icon {
-        background: transparent;
-        &::before, &::after {
-            top: 0px;
-        }
-        &::before {
-            transform: rotate(-45deg);
-        }
-        &::after {
-            transform: rotate(45deg);
-        }
-    }
 }
 
 .aside-show-trigger {
@@ -120,48 +102,6 @@
         &::after {
             top: -5px;
         }
-    }
-}
-
-.aside-pane {
-    display: flex;
-    background-color: $rkp-dark-green;
-    flex-direction: column;
-    transition: display 1s ease-out;
-    min-width: 2em;
-}
-
-.zrzutka {
-    display: none;
-    @media #{$min-lg} {
-        display: initial
-    }
-    top: 4em;
-    &__links {
-        margin: 1em 0;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    &__link {
-        color: $rkp-green;
-
-        &:hover {
-            color: $rkp-light-green;
-        }
-
-        & > .link__ico {
-            height: auto;
-            width: 2em;
-            // filter: invert(0.8);
-        }
-    }
-    &__render {
-        width: 100%;
-        height: 27em;
-    }
-
-    @media #{$min-lg} {
-        position: sticky;
     }
 }
 
@@ -367,14 +307,15 @@
             @extend %abstract-article__title;
         }
 
+        &__render {
+            @extend %zrzutka-render;
+            width: 100%;
+        }
+
         &__subtitle {
             @extend %abstract-article__title;
             color: #000;
             margin: 0;
-        }
-
-        &__link {
-
         }
 
         &__img {
@@ -503,6 +444,7 @@
     .requirements {
 
         list-style-type: none;
+        padding-inline-start: 0;
         &__item {
             text-align: justify;
             margin: 1em 0;
@@ -511,59 +453,82 @@
 }
 
 .moon-face-list {
-    :nth-child(8n+1) {
+    .moon-face:nth-child(8n+1) {
         &::before {
             content: '🌑';
             margin: 0 10px 0 -20px;
         }
     }
     
-    :nth-child(8n+2) {
+    .moon-face:nth-child(8n+2) {
         &::before {
             content: '🌒';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n+3) {
+    .moon-face:nth-child(8n+3) {
         &::before {
             content: '🌓';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n+4) {
+    .moon-face:nth-child(8n+4) {
         &::before {
             content: '🌔';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n+5) {
+    .moon-face:nth-child(8n+5) {
         &::before {
             content: '🌕';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n+6) {
+    .moon-face:nth-child(8n+6) {
         &::before {
             content: '🌖';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n+7) {
+    .moon-face:nth-child(8n+7) {
         &::before {
             content: '🌗';
             margin: 0 10px 0 -20px;
         }
     }
 
-    :nth-child(8n) {
+    .moon-face:nth-child(8n) {
         &::before {
             content: '🌘';
             margin: 0 10px 0 -20px;
         }
     }
+}
+
+.contacts-links {
+    @extend %abstract-image-links;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    &__link {
+        @extend %abstract-image-links__link;
+    }
+
+    &__img {
+        @extend %abstract-image-links__img;
+    }
+}
+
+
+.zrzutka {
+    text-align: center;
+    &__render {
+        @extend %zrzutka-render;
+    }
+
 }

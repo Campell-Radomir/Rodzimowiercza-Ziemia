@@ -99,3 +99,32 @@
         height: 100%;
     }
 }
+
+%abstract-image-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 20;
+}
+
+%abstract-image-links__link {
+    margin-bottom: 1em;
+}
+
+%abstract-image-links__img {
+    height: auto;
+    width: 2em;
+
+    @media #{$min-lg} {
+        width: 3em;
+    }
+}
+
+%zrzutka-render {
+    width: 70%;
+    height: 450px;
+    @media #{$min-lg} {
+        width: 50%;
+    }
+}
