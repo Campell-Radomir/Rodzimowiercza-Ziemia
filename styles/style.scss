@@ -324,34 +324,6 @@
         }
     }
 
-    .project-shared {
-        display: none;
-        min-height: 4em;
-        padding: 0 2em;
-        background-color: $rkp-light-green;
-        justify-content: space-between;
-        align-items: center;
-        &__text {
-            &--colored {
-                color: $rkp-dark-green;
-                font-size: 1.2em;
-                font-weight: 800;
-            }
-        }
-        
-
-        &__btn {
-            @extend %abstract-button;
-            &--fb {
-                @include color-background-hover-invert($fb-blue, #fff);
-            }
-
-            &--tt {
-                @include color-background-hover-invert($tt-blue, #fff);
-            }
-        }
-    }
-
     @media #{$min-lg} {
         grid-template-columns: 50% 50%;
 

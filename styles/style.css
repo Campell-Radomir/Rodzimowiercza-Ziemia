@@ -12,19 +12,6 @@
 .entering-article__text, .presentation-postulate__text, .presentation-perspective__text, .how-can-you-help__text, .why-help__text, .guidelines__text, .build-nearby__text, .guarantee__text, .key-requirements__text {
   text-align: justify; }
 
-.help-pay .project-shared__btn {
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  display: inline-block;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer; }
-  @media (min-width: 992px) {
-    .help-pay .project-shared__btn {
-      padding: 0.5em 2em; } }
-
 .presentation-postulate .presentation-postulates, .presentation-perspective .presentation-perspectives, .build-nearby .build-pluses {
   list-style: none;
   padding: 0;
@@ -256,33 +243,6 @@
     .help-pay .whip-round__img {
       vertical-align: baseline;
       width: 100%; }
-  .help-pay .project-shared {
-    display: none;
-    min-height: 4em;
-    padding: 0 2em;
-    background-color: #e7f6cd;
-    justify-content: space-between;
-    align-items: center; }
-    .help-pay .project-shared__text--colored {
-      color: #338535;
-      font-size: 1.2em;
-      font-weight: 800; }
-    .help-pay .project-shared__btn--fb {
-      color: #3b5998;
-      border-color: #3b5998;
-      background-color: #fff; }
-      .help-pay .project-shared__btn--fb:hover {
-        color: #fff;
-        border-color: #3b5998;
-        background-color: #3b5998; }
-    .help-pay .project-shared__btn--tt {
-      color: #00acee;
-      border-color: #00acee;
-      background-color: #fff; }
-      .help-pay .project-shared__btn--tt:hover {
-        color: #fff;
-        border-color: #00acee;
-        background-color: #00acee; }
   @media (min-width: 992px) {
     .help-pay {
       grid-template-columns: 50% 50%; } }
