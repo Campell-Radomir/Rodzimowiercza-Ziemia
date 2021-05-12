@@ -56,7 +56,9 @@
         right: 8vw;
         z-index: 20;
         padding: 0.1em;
-        border: black solid 2px;
+        // border: black solid 2px;
+        background-color: $rkp-green;
+        border-radius: 50%;
     }
 }
 

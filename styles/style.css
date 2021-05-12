@@ -127,7 +127,8 @@
   right: 8vw;
   z-index: 20;
   padding: 0.1em;
-  border: black solid 2px; }
+  background-color: #add651;
+  border-radius: 50%; }
 
 .main-page {
   width: 100%; }

@@ -29,28 +29,48 @@
         <section id="main-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                  <img src="images/laka-lato_1600_1062.jpg" class="carousel-item__img" alt="Zielona łąka latem">
+                  <picture>
+                    <source media="(min-width: 577px)" srcset="images/laka-lato_1600_1062.jpg" >
+                    <source media="(min-width: 577px)" type="image/webp" srcset="images/laka-lato_1600_1062.webp">
+                    <source type="image/webp" srcset="images/laka-lato_576_382.webp">
+                    <img src="images/laka-lato_576_382.jpg" class="carousel-item__img" alt="Zielona łąka latem">
+                  </picture>
                   <!-- <div class="carousel-caption d-none d-md-block">
                       <h2 class="carousel-caption__header">Pierwszy Nagłówek</h2>
                       <p class="carousel-caption__text">Lorem ipsum sit dolor amet</p>
                   </div> -->
               </div>
               <div class="carousel-item">
-                <img src="images/laka-mgla_1600_1062.jpg" class="carousel-item__img" alt="Zamglona łąka latem">
+                <picture>
+                  <source media="(min-width: 577px)" srcset="images/laka-mgla_1600_1062.jpg" >
+                  <source media="(min-width: 577px)" type="image/webp" srcset="images/laka-mgla_1600_1062.webp">
+                  <source type="image/webp" srcset="images/laka-mgla_576_382.webp">
+                  <img src="images/laka-mgla_576_382.jpg" loading="lazy" class="carousel-item__img" alt="Zamglona łąka latem">
+                </picture>
                 <!-- <div class="carousel-caption d-none d-md-block">
                     <h2 class="carousel-caption__header">Drugi Nagłówek</h2>
                     <p class="carousel-caption__text">Lorem ipsum sit dolor amet</p>
                 </div> -->
             </div>
               <div class="carousel-item">
-                <img src="images/strumien_1600_1062.jpg" class="carousel-item__img" alt="Górski strumień">
+                <picture>
+                  <source media="(min-width: 577px)" srcset="images/strumien_1600_1062.jpg" >
+                  <source media="(min-width: 577px)" type="image/webp" srcset="images/strumien_1600_1062.webp">
+                  <source type="image/webp" srcset="images/strumien_576_382.webp">
+                  <img src="images/strumien_576_382.jpg" loading="lazy" class="carousel-item__img" alt="Górski strumień">
+                </picture>
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h2 class="carousel-caption__header">Trzeci Nagłówek</h2>
                   <p class="carousel-caption__text">Lorem ipsum sit dolor amet</p>
                 </div> -->
               </div>
               <div class="carousel-item">
-                <img src="images/laka-jesien_1600_1062.jpg" class="carousel-item__img" alt="Łąka na jesieni">
+                <picture>
+                  <source media="(min-width: 577px)" srcset="images/laka-jesien_1600_1062.jpg" >
+                  <source media="(min-width: 577px)" type="image/webp" srcset="images/laka-jesien_1600_1062.webp">
+                  <source type="image/webp" srcset="images/laka-jesien_576_382.webp">
+                  <img src="images/laka-jesien_576_382.jpg" loading="lazy" class="carousel-item__img" alt="Łąka na jesieni">
+                </picture>
                 <!-- <div class="carousel-caption d-none d-md-block">
                   <h2 class="carousel-caption__header">Trzeci Nagłówek</h2>
                   <p class="carousel-caption__text">Lorem ipsum sit dolor amet</p>
@@ -109,22 +129,22 @@
                 <h1 class="presentation-perspective__title">Perspektywy rozwoju</h1>
                 <ul class="presentation-perspectives">
                   <li class="presentation-perspectives__item perspective">
-                    <img class="perspective__img" src="./ico/grod.svg" alt="grodzisko">
+                    <img class="perspective__img" loading="lazy" src="./ico/grod.svg" alt="grodzisko">
                     <h6 class="perspective__headline">GRODZISKO</h6>
                     <p class="perspective__text">Wybudowanie grodziska i całorocznej osady średniowiecznej.</p>
                   </li>
                   <li class="presentation-perspectives__item perspective">
-                    <img class="perspective__img" src="./ico/sad.svg" alt="sad owocowy">
+                    <img class="perspective__img" loading="lazy" src="./ico/sad.svg" alt="sad owocowy">
                     <h6 class="perspective__headline">SAD</h6>
                     <p class="perspective__text">Posadzenie sadu chroniącego dawne odmiany drzew owocowych.</p>
                   </li>
                   <li class="presentation-perspectives__item perspective">
-                    <img class="perspective__img" src="./ico/stadnina.svg" alt="stadnina">
+                    <img class="perspective__img" loading="lazy" src="./ico/stadnina.svg" alt="stadnina">
                     <h6 class="perspective__headline">STADNINA</h6>
                     <p class="perspective__text">Stadnina tarpanów czyli tzw. Koników Polskich.</p>
                   </li>
                   <li class="presentation-perspectives__item perspective">
-                    <img class="perspective__img" src="./ico/osiedle.svg" alt="osiedle domków">
+                    <img class="perspective__img" loading="lazy" src="./ico/osiedle.svg" alt="osiedle domków">
                     <h6 class="perspective__headline">OSIEDLE</h6>
                     <p class="perspective__text">Możliwość osiedlenia się w sąsiedztwie terenu wspólnotowego.</p>
                   </li>
@@ -132,7 +152,7 @@
                 <p class="presentation-perspective__text">W przyszłości pragnęlibyśmy wzbogacić to wyjątkowe miejsce o posiadające walor edukacyjny średniowieczne grodzisko i całoroczną osadę słowiańską. Osada ta, docelowo, miałaby się stać miejscem kulturalnych wydarzeń, koncertów i spotkań. Dodatkowo chcielibyśmy w ramach pozyskanego terenu posadzić sad chroniący nasze dawne, rodzime odmiany drzew i krzewów owocowych. Myślimy również o wybudowaniu stajni dla Koników Polskich, co nie tylko pozwoliłoby na reintrodukcję tych wspaniałych zwierząt, ale również prowadzać zajęcia z hipoterapii dla dzieci i młodzieży. Jednocześnie pragnęlibyśmy, by to wyjątkowe miejsce wspólnotowe stało się zalążkiem rozwijającego się niezależnie, całkowicie współczesnego osiedla mieszkaniowego, na zasadzie indywidualnego wykupu sąsiednich działek i osiedlaniu się na nich rodzin, którym szczególnie bliskie są nasze idee.</p>
               </article>
               <article class="presentation-video">
-                <iframe class="presentation-video__youtube" 
+                <iframe class="presentation-video__youtube" loading="lazy"
                 src="https://www.youtube.com/embed/eRh6hAPqN2o" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </article>
@@ -162,14 +182,14 @@
                 </div>
                 <div class="whip-round">
                   <h4 class="whip-round__title">Wsparcie przez Zrzutka.pl</h4>
-                  <iframe class="whip-round__render" src="https://zrzutka.pl/yb7p5y/widget/23" frameborder="0" scrolling="no"></iframe>
+                  <iframe class="whip-round__render" src="https://zrzutka.pl/yb7p5y/widget/23" loading="lazy" frameborder="0" scrolling="no"></iframe>
                 </div>
               </article>
               <article class="why-help">
                 <h2 class="why-help__title">Dlaczego to jest tak ważne?</h2>
                 <p class="why-help__text">Potrzebujemy własnej ziemi, byśmy nie byli jak drzewo bez korzeni. Ziemia jest naszym największym skarbem, o czym doskonale wiedzieli już nasi odlegli przodkowie. Jej zasoby są ograniczone. Nie można jej wyprodukować, więc jej podaż znajduje odbicie w ciągle rosnących cenach. Dodatkowo ziemia zapewnia pasywny dochód. Nie wymaga nakładów inwestycyjnych, remontów czy innowacji, by jej wartość rosła. Ziemia to też doskonała tarcza, chroniąca przed inflacją. W przypadku takiej inwestycji nie należy się obawiać nagłych i nieprzewidywalnych spadków wartości. Dodatkowo ceny nieruchomości w Polsce wciąż pozostają dalece niedoszacowane w stosunku do średniej europejskiej. Inwestując w ziemię, jednocześnie inwestujesz w przyszłość swoją i swoich bliskich. Jako związek wyznaniowy możemy natomiast zakupić teren rolny o powierzchni przekraczającej 3.000 metrów. Nie dotyczą nas przepisy prawne ograniczające w tym zakresie inne podmioty.</p>
                 <article class="why-help-video">
-                  <iframe class="why-help-video__youtube" 
+                  <iframe class="why-help-video__youtube" loading="lazy"
                   src="https://www.youtube.com/embed/8Gj2SZTKTAA" frameborder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </article>
@@ -190,22 +210,22 @@
                 <p class="build-nearby__text">Planując zakup ziemi dla rodzimowierczych celów kultowych, kulturalnych i oświatowych, wybierając lokalizację będziemy starali się uwzględnić możliwość zakupienia również sąsiednich działek, czy to w formie inwestycji indywidualnych, czy specjalnie do tego celu powołanej spółdzielni mieszkaniowo-osiedlowej. W przyszłości takie rozwiązanie pozwoli zainteresowanym wybudować w sąsiedztwie domek letniskowy lub całoroczny dom jednorodzinny, a tym samym stworzyć swego rodzaju słowiańskie osiedle w ramach kilku przewidzianych dzielnic tematycznych: budownictwa historycznego, ekologicznego, drewnianego i współczesnego. Tworząc rodzimowierczą, sławieńską enklawę wokół wspólnego rodzimowierczego miejsca kultu razem stajemy się jego gospodarzami i opiekunami, a także zapewniamy sobie zdrowe i spokojne dalsze życie wśród ludzi o podobnym spojrzeniu na świat.</p>
                 <ul class="build-pluses">
                   <li class="build-plus">
-                    <img src="ico/tick_v2.svg" alt="zielone zatwierdzenie" class="build-plus__img">
+                    <img src="ico/tick_v2.svg" loading="lazy" alt="zielone zatwierdzenie" class="build-plus__img">
                     <h6 class="build-plus__headline">Budownictwo historyczne</h6>
                     <p class="build-plus__text">wybuduj dom, uprawiaj ziemię i żyj jak dawni Słowianie pośród osób podzielających pasję odtwórstwa historycznego. Całorocznie lub okresowo odnów swój związek z naturą, słowiańską ziemią i kulturą.</p>
                   </li>
                   <li class="build-plus">
-                    <img src="ico/tick_v2.svg" alt="zielone zatwierdzenie" class="build-plus__img">
+                    <img src="ico/tick_v2.svg" loading="lazy" alt="zielone zatwierdzenie" class="build-plus__img">
                     <h6 class="build-plus__headline">Budownictwo ekologiczne</h6>
                     <p class="build-plus__text">sięgnij do najnowszych technologii i zainwestuj w dom, który pozwoli ci żyć zdrowo i ekologicznie, np. wykorzystując energie odnawialną.</p>
                   </li>
                   <li class="build-plus">
-                    <img src="ico/tick_v2.svg" alt="zielone zatwierdzenie" class="build-plus__img">
+                    <img src="ico/tick_v2.svg" loading="lazy" alt="zielone zatwierdzenie" class="build-plus__img">
                     <h6 class="build-plus__headline">Budownictwo drewniane</h6>
                     <p class="build-plus__text">stwórz budynek o niepowtarzalnym mikroklimacie. Drewno w naturalny sposób reguluje stan wilgotności w pomieszczeniach. Powróć do pięknej drewnianej Polski i skorzystaj z mądrości przodków, którzy byli mistrzami ciesielki.</p>
                   </li>
                   <li class="build-plus">
-                    <img src="ico/tick_v2.svg" alt="zielone zatwierdzenie" class="build-plus__img">
+                    <img src="ico/tick_v2.svg" loading="lazy" alt="zielone zatwierdzenie" class="build-plus__img">
                     <h6 class="build-plus__headline">Budownictwo współczesne</h6>
                     <p class="build-plus__text">skorzystaj z gotowych projektów architektonicznych i ciesz się współczesną wygodą. Nic nie stoi na przeszkodzie, aby wybrać to rozwiązanie i zamieszkać w naszej enklawie.</p>
                   </li>
@@ -262,7 +282,7 @@
             </section>
             <section id="zrzutka" class="zrzutka-section">
               <article class="zrzutka">
-                <iframe src="https://zrzutka.pl/yb7p5y/widget/23" scrolling="no" frameborder="0" class="zrzutka__render"></iframe>
+                <iframe src="https://zrzutka.pl/yb7p5y/widget/23" scrolling="no" frameborder="0" loading="lazy" class="zrzutka__render"></iframe>
               </article>
             </section>
           </section>
