@@ -40,7 +40,8 @@
             position: fixed;
         }
 
-        @media #{$min-lg} {
+        @media #{$min-xl} {
+            top: 3em;
             width: 8em;
         }
     }
@@ -130,17 +131,29 @@
     }
 }
 
+.carousel-item {
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 40vh;
 
-.carousel-caption {
-    &__header {
-        margin-bottom: 15rem;
-        font-weight: 800;
-    }
-
-    &__text {
-        text-rendering: optimizeLegibility;
+        @media #{$min-xl} {
+            max-height: 50vh;
+        }
     }
 }
+
+// .carousel-caption {
+    
+//     &__header {
+//         margin-bottom: 15rem;
+//         font-weight: 800;
+//     }
+
+//     &__text {
+//         text-rendering: optimizeLegibility;
+//     }
+// }
 
 .read-more-btn {
     display: none;

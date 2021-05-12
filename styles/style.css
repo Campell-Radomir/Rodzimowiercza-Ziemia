@@ -114,8 +114,9 @@
   @media (min-width: 768px) {
     .rkp-logo__img {
       position: fixed; } }
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     .rkp-logo__img {
+      top: 3em;
       width: 8em; } }
 
 .start-link__img {
@@ -183,11 +184,13 @@
     .header__link:active {
       color: #d4e9a4; }
 
-.carousel-caption__header {
-  margin-bottom: 15rem;
-  font-weight: 800; }
-.carousel-caption__text {
-  text-rendering: optimizeLegibility; }
+.carousel-item__img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 40vh; }
+  @media (min-width: 1200px) {
+    .carousel-item__img {
+      max-height: 50vh; } }
 
 .read-more-btn {
   display: none; }
