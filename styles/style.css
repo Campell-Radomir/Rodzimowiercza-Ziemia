@@ -136,35 +136,6 @@
 .main-content {
   padding: 0 10%; }
 
-#aside-show-checkbox {
-  display: none; }
-
-.aside-show-trigger {
-  display: inline-block;
-  margin: 1em 0 0 0.5em; }
-  @media (min-width: 992px) {
-    .aside-show-trigger {
-      display: none; } }
-  .aside-show-trigger .aside-show-trigger__icon {
-    display: block;
-    position: relative;
-    background: #333;
-    height: 2px;
-    transition: background .2s ease-out;
-    width: 18px; }
-    .aside-show-trigger .aside-show-trigger__icon::before, .aside-show-trigger .aside-show-trigger__icon::after {
-      background: #333;
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      transition: all .5s ease-out;
-      width: 100%; }
-    .aside-show-trigger .aside-show-trigger__icon::before {
-      top: 5px; }
-    .aside-show-trigger .aside-show-trigger__icon::after {
-      top: -5px; }
-
 .before-header {
   background-color: #000;
   color: #add651;

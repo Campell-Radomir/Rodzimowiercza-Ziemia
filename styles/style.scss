@@ -70,44 +70,6 @@
     padding: 0 10%;
 }
 
-#aside-show-checkbox {
-    display: none;
-}
-
-.aside-show-trigger {
-    @media #{$min-lg} {
-        display: none;
-    }
-    display: inline-block;
-    margin: 1em 0 0 0.5em;
-    .aside-show-trigger__icon {
-        display: block;
-        position: relative;
-
-        background: #333;
-        height: 2px;
-        transition: background .2s ease-out;
-        width: 18px;
-        &::before, &::after {
-            background: #333;
-            content: '';
-            display: block;
-            height: 100%;
-            position: absolute;
-            transition: all .5s ease-out;
-            width: 100%;
-        }
-
-        &::before {
-            top: 5px;
-        }
-
-        &::after {
-            top: -5px;
-        }
-    }
-}
-
 .before-header {
     background-color: #000; 
     color: $rkp-green; 
