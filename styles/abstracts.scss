@@ -68,6 +68,10 @@
     width: 75%;
     max-width: 10em;
     height: auto;
+
+    @media #{$min-lg} {
+        max-width: 8em;
+    }
 }
 
 %abstract-ulist__img--small {
@@ -83,7 +87,7 @@
 
 %abstract-ulist__text {
     text-align: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 %abstract-video-wrapper {

@@ -38,6 +38,9 @@
   width: 75%;
   max-width: 10em;
   height: auto; }
+  @media (min-width: 992px) {
+    .build-nearby .build-pluses .build-plus__img, .presentation-postulate .presentation-postulates .postulate__img, .presentation-perspective .presentation-perspectives .perspective__img {
+      max-width: 8em; } }
 
 .build-nearby .build-pluses .build-plus__img {
   width: 25%;
@@ -49,7 +52,7 @@
 
 .presentation-postulate .presentation-postulates .postulate__text, .presentation-perspective .presentation-perspectives .perspective__text, .build-nearby .build-pluses .build-plus__text {
   text-align: center;
-  font-size: 0.8em; }
+  font-size: 0.9em; }
 
 .presentation-video, .why-help-video {
   position: relative;
