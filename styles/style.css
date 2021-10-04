@@ -5,6 +5,9 @@
 .presentation-postulate__title, .presentation-perspective__title, .entering-article__title, .how-can-you-help__title, .help-pay .grant__title, .help-pay .grant__subtitle, .help-pay .whip-round__title, .help-pay .whip-round__subtitle, .why-help__title, .guidelines__title, .build-nearby__title, .guarantee__title, .key-requirements__title {
   color: #add651;
   text-align: center; }
+  @media (max-width: 768px) {
+    .presentation-postulate__title, .presentation-perspective__title, .entering-article__title, .how-can-you-help__title, .help-pay .grant__title, .help-pay .grant__subtitle, .help-pay .whip-round__title, .help-pay .whip-round__subtitle, .why-help__title, .guidelines__title, .build-nearby__title, .guarantee__title, .key-requirements__title {
+      font-size: 2rem; } }
 
 .presentation-postulate__title, .presentation-perspective__title {
   margin-bottom: 0; }
@@ -166,6 +169,18 @@
   @media (min-width: 1200px) {
     .carousel-item__img {
       max-height: 50vh; } }
+
+.carousel-caption {
+  bottom: 15% !important;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 5px 0 !important;
+  color: #add651 !important; }
+  @media (min-width: 992px) {
+    .carousel-caption__text {
+      font-size: 2.5rem; } }
+  .carousel-caption__text--nowrap {
+    white-space: nowrap; }
 
 .read-more-btn {
   display: none; }
